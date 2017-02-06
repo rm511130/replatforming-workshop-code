@@ -11,14 +11,14 @@
     <title>Moviefun</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/movie.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/movie.css" rel="stylesheet">
     <style>
         body {
             padding-top: 60px;
         }
     </style>
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
 
@@ -37,10 +37,24 @@
 
     <h1>Moviefun</h1>
 
-    <p>Please select one of the following links:</p>
-    <a href="setup">Setup</a> - Sets up the application with some sample data<br/>
-    <a href="moviefun">Index</a> - Start the application<br/>
-</div>
+    <h2>Seeded Database with the Following movies</h2>
+    <table width="500">
+        <tr>
+            <td><b>Title</b></td>
+            <td><b>Director</b></td>
+            <td><b>Genre</b></td>
+        </tr>
+        <c:forEach items="${requestScope.movies}" var="movie">
+            <tr>
+                <td>${ movie.title }</td>
+                <td>${ movie.director }</td>
+                <td>${ movie.genre }</td>
+            </tr>
+        </c:forEach>
+    </table>
 
+    <h2>Continue</h2>
+    <a href="moviefun">Go to main app</a>
+</div>
 </body>
 </html>
