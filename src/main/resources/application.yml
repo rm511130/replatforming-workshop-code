@@ -5,3 +5,6 @@ spring:
   datasource:
     url: jdbc:h2:${java.io.tmpdir}/movie-fun
     username: root
+  mvc.view:
+    prefix: /WEB-INF/
+    suffix: .jsp
